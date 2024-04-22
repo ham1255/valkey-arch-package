@@ -1,10 +1,3 @@
-# Maintainer: Andrew Crerar <crerar@archlinux.org>
-# Maintainer: Frederik Schwan <freswa at archlinux dot org>
-# Contributor: Sergej Pupykin <pupykin.s+arch@gmail.com>
-# Contributor: Bartłomiej Piotrowski <bpiotrowski@archlinux.org>
-# Contributor: Jan-Erik Rediger <badboy at archlinux dot us>
-# Contributor: nofxx <x@<nick>.com>
-
 pkgname=valkey
 pkgver=7.2.5
 pkgrel=1
@@ -13,6 +6,7 @@ arch=('x86_64')
 url='https://valkey.io/'
 license=('BSD')
 depends=('jemalloc' 'grep' 'shadow' 'systemd-libs')
+provides=(redis)
 # pkg-config fails to detect systemd libraries if systemd is not installed
 makedepends=('systemd' 'openssl')
 backup=('etc/valkey/valkey.conf'
